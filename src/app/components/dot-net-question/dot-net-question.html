@@ -1,0 +1,122 @@
+<div class="api-content">
+
+    <section>
+        <h3>1. What Is a Web API?</h3>
+        <p>
+            Web API is a set of rules or protocols that provides interaction between web / software
+            applications.
+            It acts like a bridge between two systems, letting one system request data or perform
+            actions provided by another system over the web.
+        </p>
+        <p>
+            <strong>Metaphorically:</strong> An API is like a waiter in a restaurant that will serve
+            us the food (data) based on the order (request) that we (the app) made.
+        </p>
+    </section>
+
+    <section>
+        <h3>2. How can you pass multiple complex types in Web API?</h3>
+        <p>
+            We can’t directly pass multiple complex types from the request body, so we have to wrap
+            them in one wrapper class.
+        </p>
+        <p>For example, first we have our individual models:</p>
+
+        <div class="code-block">
+            <p><strong>Models:</strong></p>
+            <div class="code-container">
+                <pre><code>{{ codeBlocks[0].code }}</code></pre>
+            </div>
+        </div>
+
+        <p>Then, we create a wrapper class that contains both of our models:</p>
+
+        <div class="code-block">
+            <div class="code-container">
+                <pre><code>{{ codeBlocks[1].code }}</code></pre>
+            </div>
+        </div>
+
+        <p>In our API controller, we can use it like below:</p>
+
+        <div class="code-block">
+            <p><strong>Controller:</strong></p>
+            <div class="code-container">
+                <pre><code>{{ codeBlocks[2].code }}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>3. State differences between MVC and WebAPI</h3>
+        <p>
+            MVC (Model-View-Controller) is used to build web applications that return both views and
+            data for users.
+            Meanwhile, Web API is used to build services that return data (like JSON or XML) to be
+            consumed by other applications.
+        </p>
+        <p>
+            So in short, use MVC when we need to return a web page and use Web API when we want to
+            return data to another application.
+        </p>
+    </section>
+
+    <section>
+        <h3>4. Who can consume Web API?</h3>
+        <p>
+            Web APIs can be consumed by a wide variety of clients because they are designed to be
+            accessible to any platform that can make HTTP requests.
+        </p>
+        <p><strong>For example:</strong></p>
+        <ul>
+            <li>Web application</li>
+            <li>Mobile application</li>
+            <li>Desktop application</li>
+            <li>IoT devices</li>
+            <li>Command line tool / script</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>5. What is SSO based authentication?</h3>
+        <p>
+            SSO (Single Sign-On) is an authentication method that allows a user to log in once and
+            gain access to multiple applications or systems without logging in again for each one.
+        </p>
+        <p>
+            <strong>Metaphor:</strong> It's like our ID badge that we use to enter our office
+            building. At the front desk, we scan or show our ID badge to enter into the building.
+            Now, once we enter the building, we now have access to other rooms within our boundary
+            like our office room, meeting room, cafeteria, etc.
+        </p>
+        <p>
+            <strong>Example:</strong> Google account. Once we log in, we can access Gmail, Calendar,
+            Google Drive, etc. without having to enter a password again for each application.
+        </p>
+    </section>
+
+    <section>
+        <h3>6. What kind of authentication is available for Web API? List 2 and elaborate.</h3>
+        <p>
+            There are a few authentication options available for Web API, but two common ones are:
+        </p>
+
+        <p><strong>Token-based authentication (e.g., JWT):</strong></p>
+        <ul>
+            <li>We log in once and get a special key (called a token) that proves who we are.</li>
+            <li>We use this key every time we talk to the API.</li>
+            <li>The API checks the token, and if it’s valid, we’re allowed in and can access the
+                data.</li>
+            <li>This method avoids sending our username and password every time.</li>
+        </ul>
+
+        <p><strong>HTTP Basic Authentication:</strong></p>
+        <ul>
+            <li>Every time we send a request to the API, we include our username and password.</li>
+            <li>The API checks if the info is correct and lets us in.</li>
+            <li>It’s easy to implement but considered insecure because credentials are sent each
+                time.</li>
+        </ul>
+    </section>
+
+</div>

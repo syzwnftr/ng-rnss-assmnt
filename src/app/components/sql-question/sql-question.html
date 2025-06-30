@@ -1,0 +1,9 @@
+@for (answer of sqlQueries; track $index) {
+<div class="code-container">
+    <div class="code-header">
+        <span>Answer for {{answer.title}}</span>
+        <button mat-button (click)="copyQuery(answer.query)">📋 Copy</button>
+    </div>
+    <pre><code>{{ answer.query }}</code></pre>
+</div>
+}
